@@ -41,9 +41,7 @@ This file contains update statement that is being used in the ETL, this update h
 
 ##Technologies
 
-1. SQL Server Data Tools for visual Studio 2013 para la contrucción de la ETL.
 1. SQL Server Data Tools for visual Studio 2013 for the ETL contruction.
-2. Microsoft SQL server 2014 para la creación de Base de datos, Tablas y Procedimientos almacenados.
 2. Microsoft SQL server 2014 for the data base creation, tables and store procedures.
 
 I decided to use the four files in the same solution to see the four scenarios at the same time.
