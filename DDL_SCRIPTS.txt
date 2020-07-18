@@ -19,3 +19,15 @@ CREATE TABLE PLAYER (
 	FULL_NAME NVARCHAR(100)
 	PRIMARY KEY (ID)
 )
+
+/*
+
+Cree el ID varchar de 20 debido a que me encontré con que el archivo traia numeros y letras como la O. Este campo lo hice primary key.
+Cree el PHONE_NUMBER varchar 20 para:
+-Números celulares nacionales.
+-Números celulares internacionales.
+-Codigo postal.
+Cree el FULL_NAME nvarchar de 100 en caso tal:
+-Ingresar un dato unicode.
+
+*/

@@ -1,45 +1,51 @@
 # SSIS_EXERCISE_PLAYER
 
-Este repositorio contiene toda la información necesaria para la solución ETL del test propuesto basada en SSIS.
+This repository contains all the information needed for the ETL test solution developed in SSIS. 
 
-Dentro del proyecto se crearon las siguientes carpetas:
+Within the project were created the following files: 
 
 ## Backup-Folder
 
-Esta carpeta se crea para almacenar los archivos que fueron procesados exitosamente, para cada archivo existe una subcarpeta.
+This folder was created to store the files that were loaded sucessfully, for every CSV file there is one sub-file.
 
 ## Error-Folder
 
-Esta carpeta se crea para almacenar los archivos que fueron leidos y en el proceso finalizaron con error.
+This folder was created to store the files that were read but the process finished with errors.
 
 ## Bat
 
-Esta carpeta se crea para almacenar todos los .bat que ejecuta la ETL para guardar cada uno 
-de los archivos con exito o con error.
+This folder was created to store all the files .bat that were executed in the ETL to save every file with success or error.
 
 ## Files to load
 
-Esta carpeta se crea para almacenar los archivos a cargar.
+This folder was created to store all the files that are going to be loaded.
 
 ## test
 
-Esta carpeta contiene la solución de la ETL, con su respectivo package.
+This folder contains the ETL solution, with its respective package.
 
 ## DDL_SCRIPT
 
-Este archivo plano contiene la creación de la base de datos Test_player y la creación de las siguientes tablas PLAYER_TMP y PLAYER en SQL Server.
-Se decide crear una tabla en memoria PLAYER_TMP intermedia para así poder limpiar la data basura antes de ser cargada a la principal que es PLAYER.
+This file has the database creation and the tables creation scripts. In this flat file explain the structure used in the tables.
+
+I made the decision to created an in memory table called PLAYER_TMP in order to clean the dirty data before to be loaded in the main PLAYER table.
+
+This file contains database creation, the tables and store procedures.
+Data base: TEST_PLAYER
+Tables: PLAYER_TMP, PLAYER
+Store procedure: LOAD_PRAYER
 
 ## DML_SCRIPT
 
-Este archivo contiene el UPDATE que está dentro de la ETL, el cual se encarga de eliminar la data basura en los archivos.
+This file contains update statement that is being used in the ETL, this update has the purpose to clean the dirty data in the files.
 
-
-Se utilizó: 
+##Technologies
 
 1. SQL Server Data Tools for visual Studio 2013 para la contrucción de la ETL.
-2. SQL server 2014 para la creación de Base de datos, Tablas y Procedimientos almacenados.
+1. SQL Server Data Tools for visual Studio 2013 for the ETL contruction.
+2. Microsoft SQL server 2014 para la creación de Base de datos, Tablas y Procedimientos almacenados.
+2. Microsoft SQL server 2014 for the data base creation, tables and store procedures.
 
+I decided to use the four files in the same solution to see the four scenarios at the same time.
 
-Decido utilizar los 4 archivos en la misma solución para visualizar los 4 escenarios.
-
+Video Link executing the ETL solution: https://drive.google.com/file/d/16h85z_-7cP5rGU792EJFOcPTQiTHhguo/view?usp=sharing
