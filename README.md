@@ -39,11 +39,11 @@ Store procedure: LOAD_PRAYER
 
 This file contains update statement that is being used in the ETL, this update has the purpose to clean the dirty data in the files.
 
-##TRIGGERS
+## TRIGGERS
 
 This file contains every trigger created to save a log when the player table is modified for a insert, update or delete.
 
-##Technologies
+## Technologies
 
 1. SQL Server Data Tools for visual Studio 2013 for the ETL contruction.
 2. Microsoft SQL server 2014 for the data base creation, tables and store procedures.

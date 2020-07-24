@@ -1,8 +1,9 @@
---Creation Data Base
+--Creation DataBase
 CREATE DATABASE TEST_PLAYER;
 
 USE TEST_PLAYER
 
+--Creation Intermediate Table
 CREATE TABLE PLAYER_TMP (
 	ID varchar(20) NOT NULL,
 	FIRST_NAME VARCHAR(50),
@@ -12,6 +13,7 @@ CREATE TABLE PLAYER_TMP (
 	PRIMARY KEY (ID)
 )
 
+--Creation Main Table
 CREATE TABLE PLAYER (
 	ID varchar(20) NOT NULL,
 	FIRST_NAME VARCHAR(50),
@@ -21,6 +23,7 @@ CREATE TABLE PLAYER (
 	PRIMARY KEY (ID)
 )
 
+--Creation Log Table
 CREATE TABLE player_historial(
 [Date] date,
 [Id_Player] varchar(20),
