@@ -1,0 +1,84 @@
+USE [TEST_PLAYER]
+GO
+
+/****** Object:  Trigger [dbo].[tr_player_deleted]    Script Date: 23/07/2020 7:20:56 p. m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- ===================================================================================================
+-- Author: Daniel Bustamante
+-- Create date: 20200722
+-- Description: Through the next trigger we can know when someone delete any row in the player table. 
+-- ===================================================================================================
+CREATE TRIGGER [dbo].[tr_player_deleted]
+   ON  [dbo].[PLAYER]
+   AFTER DELETE
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+	insert into PLAYER_HISTORICAL values (GETDATE(),'Rows deleted', SYSTEM_USER)
+
+END
+
+GO
+
+
+USE [TEST_PLAYER]
+GO
+
+/****** Object:  Trigger [dbo].[tr_player_inserted]    Script Date: 23/07/2020 7:21:49 p. m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- ===================================================================================================
+-- Author: Daniel Bustamante
+-- Create date: 20200722
+-- Description: Through the next trigger we can know when someone insert any row in the player table. 
+-- ===================================================================================================
+CREATE TRIGGER [dbo].[tr_player_inserted]
+   ON  [dbo].[PLAYER]
+   AFTER INSERT
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+	insert into PLAYER_HISTORICAL values (GETDATE(), 'Rows inserted', SYSTEM_USER)
+
+END
+
+GO
+
+USE [TEST_PLAYER]
+GO
+
+/****** Object:  Trigger [dbo].[tr_player_updated]    Script Date: 23/07/2020 7:22:12 p. m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- ===================================================================================================
+-- Author: Daniel Bustamante
+-- Create date: 20200722
+-- Description: Through the next trigger we can know when someone update any row in the player table. 
+-- ===================================================================================================
+CREATE TRIGGER [dbo].[tr_player_updated]
+   ON  [dbo].[PLAYER]
+   AFTER UPDATE
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+	insert into PLAYER_HISTORICAL values (GETDATE(), 'Rows updated', SYSTEM_USER)
+
+END
+
+GO

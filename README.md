@@ -20,7 +20,7 @@ This folder was created to store all the files .bat that were executed in the ET
 
 This folder was created to store all the files that are going to be loaded.
 
-## test
+## Test
 
 This folder contains the ETL solution, with its respective package.
 
@@ -38,6 +38,10 @@ Store procedure: LOAD_PRAYER
 ## DML_SCRIPT
 
 This file contains update statement that is being used in the ETL, this update has the purpose to clean the dirty data in the files.
+
+##TRIGGERS
+
+This file contains every trigger created to save a log when the player table is modified for a insert, update or delete.
 
 ##Technologies
 
