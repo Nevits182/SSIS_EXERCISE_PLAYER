@@ -41,7 +41,7 @@ This file contains update statement that is being used in the ETL, this update h
 
 ## TRIGGERS
 
-This file contains every trigger created to save a log when the player table is modified for a insert, update or delete.
+This file contains every trigger created to save a log when the player table is modified for an insert, update or delete.
 
 ## Technologies
 

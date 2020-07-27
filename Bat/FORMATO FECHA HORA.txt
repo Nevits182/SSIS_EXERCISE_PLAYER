@@ -1,0 +1,15 @@
+EXAMPLE:
+dd.mm.yyyy 
+29.03.2018
+%DATE:~6,4%
+       ^-----skip 6 characters
+         ^---keep 4 characters
+AÑO: 6,4
+MES: 3,2
+DIA: 0,2
+
+hh:mm:ss
+
+HORA: 0,2
+MINUTO: 3,2
+SEGUNDO: 6,2
